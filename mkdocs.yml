@@ -1,7 +1,52 @@
-site_name: Моя Документация
+site_name: Мое Резюме
 theme:
   name: material
   language: ru
   palette:
-    scheme: slate  # Темная тема (замени на default для светлой)
-    primary: indigo
+    # Темная база (Slate)
+    - scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Перейти на светлую тему
+    # Светлая база (Default)
+    - scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Перейти на темную тему
+  features:
+    - navigation.sections
+    - content.code.copy
+    - content.tooltips
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/your_username
+    - icon: fontawesome/brands/github
+      link: https://github.com/your_username
+
+# Кастомные цвета (Персиковый акцент)
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+nav:                                      #расположение всех ваших файлов
+  - Главная: index.md 
+  - Мои страницы: 
+    - Create a new document: src/managing/create.md
+    - Download a document: src/managing/download.md
+    - Print a document: src/managing/print.md
+    - Share a document: src/managing/share.md
+    - Manage page settings: src/managing/page.md
+    - Format a text: src/managing/format.md
+    - Insert different types of content: src/managing/content.md
+    - Manage add-ons: src/managing/addons.md
