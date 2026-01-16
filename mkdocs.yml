@@ -1,4 +1,4 @@
-site_name: Мое Резюме
+site_name: Cozy Grave
 theme:
   name: material
   language: ru
@@ -38,15 +38,13 @@ markdown_extensions:
   - md_in_html
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true
+      alternate_style: true # Эта настройка осталась внутри tabbed
+  - pymdownx.emoji: # Новое отдельное расширение для иконок
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:                                      #расположение всех ваших файлов
   - Главная: index.md 
   - Мои страницы: 
-    - Create a new document: src/managing/create.md
-    - Download a document: src/managing/download.md
-    - Print a document: src/managing/print.md
-    - Share a document: src/managing/share.md
-    - Manage page settings: src/managing/page.md
-    - Format a text: src/managing/format.md
-    - Insert different types of content: src/managing/content.md
-    - Manage add-ons: src/managing/addons.md
+    - Обо мне: about.md
+    - Что посмотреть: src/managing/download.md
+    - Полезные штучки: src/managing/print.md
