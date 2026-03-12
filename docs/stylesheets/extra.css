@@ -25,3 +25,14 @@ h1, h2, h3 {
   border-color: #FFB38E !important;
   color: #1a1a1a !important;
 }
+
+blockquote.is-info {
+    background-color: #e7f3ff;  /* светло-синий фон */
+    border-left: 5px solid #2196F3; /* синяя полоса слева */
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 1em 0;
+}
+blockquote.is-info p {
+    margin: 0;
+}

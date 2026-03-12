@@ -1,4 +1,4 @@
-site_name: Cozy Grave
+site_name: Daria Test Site
 theme:
   name: material
   language: ru
@@ -36,15 +36,15 @@ extra_css:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - pymdownx.tilde
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true # Эта настройка осталась внутри tabbed
   - pymdownx.emoji: # Новое отдельное расширение для иконок
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:                                      #расположение всех ваших файлов
-  - Главная: index.md 
-  - Мои страницы: 
-    - Обо мне: about.md
-    - Что посмотреть: src/managing/download.md
-    - Полезные штучки: src/managing/print.md
+  - Пояснения к тестовому заданию: index.md 
+  - Создание агента: just_ai.md
