@@ -37,6 +37,8 @@ extra_css:
 
 markdown_extensions:
   - attr_list
+  - toc:
+      slugify: !!python/name:markdown.extensions.toc.slugify_unicode
   - md_in_html
   - pymdownx.tilde
   - pymdownx.superfences
