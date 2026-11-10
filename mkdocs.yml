@@ -1,4 +1,5 @@
 site_name: Daria Test Site
+site_url: https://hyundaedo.github.io/dsnelyubova/
 use_directory_urls: true  
 theme:
   name: material
@@ -47,5 +48,8 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:                                      #расположение всех ваших файлов
-  - Пояснения к тестовому заданию: index.md 
-  - Создание агента: just_ai.md
+  # - Пояснения к тестовому заданию: index.md 
+  # - Создание агента: just_ai.md
+  - Тестовое AIMOR: aimor_test.md
+  - Пояснения к тестовому заданию AIMOR: aimor_comm.md
+
