@@ -28,16 +28,16 @@ The recursive DNS server checks if the answer is in its cache:
 - a match is found — the resolver returns the IP address to the browser, and it navigates to it;
 - not found — the resolver goes through a chain of servers (steps 3–5) to find the IP address.
 
-**Step 3. Root server**  
+**Step 3. [Root server](#root)**  
 The root server does not know the IP addresses of websites, but it knows which servers are responsible for top-level domains (`.com`, `.org`, `.ru`). It provides the address of the required TLD server. The resolver contacts the TLD server.
 
-**Step 4. Top-level domain server (TLD server)**  
+**Step 4. [Top-level domain server (TLD server)](#root)**  
 A TLD is a top-level domain, meaning the last part of the name: `.com`, `.org`, `.ru`. The TLD server knows which server stores the records for a specific domain and provides its address. The resolver contacts this server.  
 
 !!! note ""
     TLDs come in several types: country-code, generic, sponsored, and others. For more details, see the article "[What is a TLD and what types are there](link)".
 
-**Step 5. Authoritative DNS server for the domain**  
+**Step 5. [Authoritative DNS server for the domain](#auth)**  
 
 This server stores the up-to-date records of the domain entered by its owner. For a website, this is the record with the IP address.
 
@@ -61,9 +61,9 @@ DNS servers differ in two ways: **the role** they perform and **who manages** th
 
 | DNS server type | What it does | Where it is found |
 | :- | :- | :- |
-| Authoritative | Stores records for a specific domain and provides the final answer. It does not query other servers; it returns exactly what the domain owner specified | Hosting providers, domain registrars, website owners' DNS services |
+| <a id="auth"></a> Authoritative | Stores records for a specific domain and provides the final answer. It does not query other servers; it returns exactly what the domain owner specified | Hosting providers, domain registrars, website owners' DNS services |
 | <a id="resolver"></a> Recursive (resolver) | Receives a request from a device. If the answer is not in the cache, it contacts the root, TLD, and authoritative servers until it gets the IP address | Providers, public DNS, VPN services, routers |
-| Root and TLD servers | Indicate where to look for the next server in the chain. They do not store website addresses | Root server operators and TLD registries|
+| <a id="root"></a> Root and TLD servers | Indicate where to look for the next server in the chain. They do not store website addresses | Root server operators and TLD registries|
 
 !!! note ""
     A **caching DNS server** is not a separate type but a function: saving received answers for the duration of the TTL (Time To Live — how long a record may be cached). It is present in most recursive servers, routers, and operating systems. The cache speeds up website loading and reduces the load on DNS servers, but it may return an outdated answer until the TTL expires.
